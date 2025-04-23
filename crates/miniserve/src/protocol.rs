@@ -126,7 +126,7 @@ pub fn handle(
             }
 
             match parse_request(buf) {
-                Ok(None) => continue,
+                Ok(None) => {},
                 Ok(Some(req)) => {
                     let amt = buf.len();
                     reader.consume(amt);
